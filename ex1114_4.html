@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서에 대해 프로토타입을 만들라</title>
+    <script>
+        function Bookstore(title,writer, publisher, price){
+        this.title= title;
+        this.writer= writer;
+        this.publisher= publisher;
+        this.price= price;
+
+        this.letNum=function(name){
+            document.write(name+"님이"+this.title+"을 대여했습니다");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>도서 대여 횟수</h1>
+    <script>
+        let Bookstore1=new Bookstore("홍길동전","허균","비전사","5000");
+        Bookstore1.letNum("홍길동");
+    </script>
+</body>
+</html>
